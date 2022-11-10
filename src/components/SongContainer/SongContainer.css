@@ -1,0 +1,27 @@
+.songContainer {
+    width: 18%;
+    height: 27vh;
+    margin: 5vw 1vw 1vw 1vw;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.songImg {
+    width: 100%;
+    height: 70%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.theImgOfSong {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+
+}
+
+.songContainer:hover {
+    opacity: 50%;
+}

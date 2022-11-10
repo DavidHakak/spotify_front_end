@@ -1,0 +1,9 @@
+.songArtistName {
+    background: yellow;
+    height: 48%;
+    width: 63%;
+    margin: 1.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

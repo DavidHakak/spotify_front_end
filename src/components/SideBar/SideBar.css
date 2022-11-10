@@ -1,0 +1,10 @@
+.sideBar {
+    background-image: linear-gradient(180deg, rgb(63, 83, 230), rgb(39, 225, 225));
+    width: 22vw;
+    height: 100vh;
+    margin-left: 78vw;
+    border-left: 0.5px solid black;
+    box-shadow: 180px 0px 0px black;
+    position: fixed;
+    z-index: -1;
+}
