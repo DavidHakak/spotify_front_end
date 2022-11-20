@@ -1,4 +1,7 @@
 .main {
     width: 100vw;
+    height: 90%;
     display: flex;
+    flex-wrap: wrap;
+
 }

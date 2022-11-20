@@ -11,11 +11,10 @@
 }
 
 .container:hover .input {
-    width: 50vw;
+    width: 20vw;
 }
 
 .container .input {
-
     background: transparent;
     border: none;
     outline: none;

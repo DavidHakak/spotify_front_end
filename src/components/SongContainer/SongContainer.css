@@ -1,9 +1,10 @@
 .songContainer {
-    width: 18%;
+    width: 15%;
     height: 27vh;
-    margin: 5vw 1vw 1vw 1vw;
+    margin: 2vw 1vw 1vw 1vw;
     border: 1px solid black;
     border-radius: 15px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.506);
 }
 
 .songImg {

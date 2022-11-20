@@ -104,7 +104,7 @@ const songs = [
   },
 ];
 
-function MainContainerSongs() {
+function MainContainerSongs(props) {
   return (
     <div className="mainContainerSongs">
       {songs.map((v) => (

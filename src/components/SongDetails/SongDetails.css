@@ -8,3 +8,35 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.songArtistName {
+    background: yellow;
+    height: 48%;
+    width: 63%;
+    margin: 1.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.songName {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: palevioletred;
+}
+
+
+
+.songTime {
+    background: khaki;
+    height: 40%;
+    width: 30%;
+    margin: 3% 4% 0% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
