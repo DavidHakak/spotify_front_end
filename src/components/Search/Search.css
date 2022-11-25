@@ -1,9 +1,11 @@
 .container {
     background: rgba(209, 219, 220, 0.082);
-    height: 60px;
+    height: 57px;
+
     border-radius: 30px;
     padding: 10px 20px;
     display: flex;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: 0.8s;

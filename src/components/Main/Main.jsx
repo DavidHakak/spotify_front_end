@@ -3,11 +3,11 @@ import MainContainerSongs from "../MainContainerSongs/MainContainerSongs";
 import SideBar from "../SideBar/SideBar";
 import "./Main.css";
 
-function Main(props) {
-  console.log(props.songList.results[0]);
+function Main({songList, setPopup}) {
+ 
   return (
     <div className="main">
-      <MainContainerSongs />
+      <MainContainerSongs songList={songList} setPopup={setPopup} />
       <SideBar />
     </div>
   );

@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import Main from "../Main/Main";
 import "./Layout.css";
 
-function Layout() {
+function Layout({setPopup}) {
   const [onSearch, setOnSearch] = useState("ישי ריבו");
   const [response, setResponse] = useState("");
 
@@ -32,7 +32,7 @@ function Layout() {
   return (
     <div className="layout">
       <Header setOnSearch={setOnSearch} />
-      <Main songList={response.data} />
+      <Main songList={response.data} setPopup={setPopup}/>
     </div>
   );
 }
