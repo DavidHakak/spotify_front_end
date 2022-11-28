@@ -10,7 +10,20 @@ function MainContainerSongs({ songList, setPopup }) {
           <SongContainer key={song.title} song={song} setPopup={setPopup} />
         ))
       ) : (
-        <div class="lds-hourglass"></div>
+        <>
+          <span class="loader"></span>
+          <span class="loader"></span>
+          <span class="loader"></span>
+          <span class="loader"></span>
+          <span class="loader"></span>
+          <span class="loader"></span>
+          <span class="loader"></span>
+          <span class="loader"></span>
+          <span class="loader"></span>
+          <span class="loader"></span>
+          <span class="loader"></span>
+          <span class="loader"></span>
+        </>
       )}
     </div>
   );

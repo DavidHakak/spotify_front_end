@@ -3,23 +3,18 @@ import SongDetails from "../SongDetails/SongDetails";
 import "./SongContainer.css";
 
 function SongContainer({ song, setPopup }) {
-  const linkForSong = song.shorts_url;
-
   return (
     <div
       className="songContainer"
       onClick={() => {
-        setPopup(linkForSong);
-        console.log(linkForSong);
+        setPopup(song.id);
       }}
     >
-    
-        <img
-          src={song.thumbnail.url}
-          alt={song.thumbnail.title}
-          className="songImg"
-        />
-     
+      <img
+        src={song.thumbnail.url}
+        alt={song.thumbnail.title}
+        className="songImg"
+      />
 
       <SongDetails
         name={song.title}

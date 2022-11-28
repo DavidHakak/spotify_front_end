@@ -1,20 +1,18 @@
 import React from "react";
-import YouTube, { YouTubeProps } from "react-youtube";
+import YouTube from "react-youtube";
 import "./Popup.css";
 
 function Popup({ popup, setPopup }) {
-    //console.log(popup);
-
-  
-    return (
-      <div className="popup" onClick={() => setPopup(false)}>
-        <div className="innerPopup" onClick={(e) => e.stopPropagation()}>
-          <button className="buttonClose" onClick={() => setPopup(false)}>
-            X
-          </button>
-       
-        </div>
+  return (
+    <div className="popup" onClick={() => setPopup(false)}>
+      <div className="innerPopup" onClick={(e) => e.stopPropagation()}>
+        <YouTube
+          videoId={popup}
+          iframeClassName="iframe"
+          className="iframe"
+        />
       </div>
-    );
-  }
+    </div>
+  );
+}
 export default Popup;

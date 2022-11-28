@@ -10,21 +10,14 @@
 }
 
 .innerPopup {
-    height: 60%;
-    width: 50%;
+    height: 68%;
+    width: 56%;
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.713);
 }
 
-.buttonClose {
-    font-size: 2rem;
-    height: 2.5rem;
-    width: 2.5rem;
-    margin: 3% 0% 0% 3%;
-    background: rgba(0, 0, 0, 0.494);
-    color: white;
-}
-
-.buttonClose:hover {
-    background: rgba(0, 0, 0, 0.703);
+.iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
 }
