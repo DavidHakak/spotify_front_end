@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import MainContext from "../../context/MainContext";
 import SongContainer from "../SongContainer/SongContainer";
-import "./MainContainerSongs.css";
+import "./MainContainerCearchSongs.css";
 
-function MainContainerSongs({ songList, setPopup }) {
+function MainContainerSongs() {
+  const {songList, setPopup}=useContext(MainContext);
+
+
+
   return (
     <div className="mainContainerSongs">
       {songList ? (
-        songList.results.map((song) => (
+        
+        songList.map((song) => (
           <SongContainer key={song.title} song={song} setPopup={setPopup} />
-        ))
-      ) : (
-        <>
+          ))
+          ) : (
+            <>
           <span class="loader"></span>
           <span class="loader"></span>
           <span class="loader"></span>

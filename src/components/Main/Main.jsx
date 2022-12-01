@@ -1,14 +1,13 @@
 import React from "react";
-import MainContainerSongs from "../MainContainerSongs/MainContainerSongs";
-import SideBar from "../SideBar/SideBar";
+import MainContainerCearchSongs from "../MainContainerCearchSongs/MainContainerCearchSongs";
+
 import "./Main.css";
 
-function Main({songList, setPopup}) {
+function Main() {
  
   return (
     <div className="main">
-      <MainContainerSongs songList={songList} setPopup={setPopup} />
-      <SideBar />
+      <MainContainerCearchSongs  />
     </div>
   );
 }

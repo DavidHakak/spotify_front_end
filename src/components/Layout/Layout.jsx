@@ -1,12 +1,14 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import "./Layout.css";
+import SideBar from "../SideBar/SideBar";
+import MainContext from "../../context/MainContext";
+import Popup from '../Popup/Popup';
+function Layout() {
+const {onSearch, setSongList, popup} = useContext(MainContext)
 
-function Layout({setPopup}) {
-  const [onSearch, setOnSearch] = useState("ישי ריבו");
-  const [response, setResponse] = useState("");
 
   useEffect(() => {
     const options = {
@@ -22,7 +24,7 @@ function Layout({setPopup}) {
     axios
       .request(options)
       .then(function (response) {
-        setResponse(response);
+        setSongList(response.data.results);
       })
       .catch(function (error) {
         console.error(error);
@@ -31,8 +33,10 @@ function Layout({setPopup}) {
 
   return (
     <div className="layout">
-      <Header setOnSearch={setOnSearch} />
-      <Main songList={response.data} setPopup={setPopup}/>
+      <Header  />
+      <Main  />
+      <SideBar />
+      {popup && <Popup />}
     </div>
   );
 }

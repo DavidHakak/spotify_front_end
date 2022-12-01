@@ -1,18 +1,34 @@
-import Layout from './components/Layout/Layout';
-import './App.css';
-import Popup from './components/Popup/Popup';
 import { useState } from 'react';
+import Layout from './components/Layout/Layout';
+
+import Login from "./pages/Login/Login"
+import MainContext from './context/MainContext';
+import './App.css';
 
 function App() {
-  const [popup, setPopup] = useState(false)
+  const [popup, setPopup] = useState(false);
+  const [onSearch, setOnSearch] = useState("ישי ריבו");
+  const [songList, setSongList] = useState("");
+
+
 
   return (
-    
-    <div className="App">
+    <MainContext.Provider value={{
+      popup,
+      setPopup,
+      onSearch,
+      setOnSearch,
+      songList,
+      setSongList
+    }} >
+      <div className="App" >
+        <Layout  />
+        {/* <Login/> */}
+        
 
-      <Layout setPopup={setPopup} />
-      {popup ? <Popup popup={popup} setPopup={setPopup} /> : false}
-    </div>
+      </div >
+    </MainContext.Provider>
+
   );
 }
 

@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import MainContext from "../../context/MainContext";
 import "./Search.css";
 
-function Search(props) {
+function Search() {
+
+  const {setOnSearch} = useContext(MainContext);
+
   const changeSearchState = (e) => {
     if (e.key === "Enter") {
-      props.setOnSearch(e.target.value);
+      setOnSearch(e.target.value);
     }
   };
+
   return (
-    <div className="container">
+    <div className="searchContainer">
       <input
         type="search"
         name="search"

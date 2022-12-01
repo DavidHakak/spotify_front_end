@@ -1,7 +1,6 @@
-.container {
-    background: rgba(209, 219, 220, 0.082);
+.searchContainer {
+    background: rgba(0, 228, 249, 0.082);
     height: 57px;
-
     border-radius: 30px;
     padding: 10px 20px;
     display: flex;
@@ -12,11 +11,12 @@
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.617);
 }
 
-.container:hover .input {
+.searchContainer:hover .input {
     width: 20vw;
+    background: none;
 }
 
-.container .input {
+.searchContainer .input {
     background: transparent;
     border: none;
     outline: none;
@@ -26,6 +26,6 @@
     transition: 0.8s;
 }
 
-.container .btn .fas {
+.searchContainer .btn .fas {
     color: #000000;
 }

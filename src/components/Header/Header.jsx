@@ -4,12 +4,12 @@ import Search from "../Search/Search";
 import Avatar from "../Avatar/Avatar";
 import "./Header.css";
 
-function Header(props) {
+function Header() {
   return (
     <div className="header">
       <Logo />
 
-      <Search setOnSearch={props.setOnSearch} />
+      <Search />
 
       <Avatar />
     </div>
