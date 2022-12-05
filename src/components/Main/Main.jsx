@@ -4,10 +4,10 @@ import MainContainerCearchSongs from "../MainContainerCearchSongs/MainContainerC
 import "./Main.css";
 
 function Main() {
- 
   return (
     <div className="main">
-      <MainContainerCearchSongs  />
+      <MainContainerCearchSongs />
+     
     </div>
   );
 }

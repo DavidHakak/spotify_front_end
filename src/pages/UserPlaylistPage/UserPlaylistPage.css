@@ -1,0 +1,9 @@
+.UserPlaylistPag {
+
+
+    width: 100vw;
+    height: 96vh;
+    display: flex;
+    flex-wrap: wrap;
+
+}

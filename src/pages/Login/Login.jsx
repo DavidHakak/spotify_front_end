@@ -3,7 +3,10 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
-  const userList = [{ name: "d", password: "12" }];
+  const userList = [
+    { name: "d", password: "12" },
+    { name: "tamar", password: "123456" },
+  ];
 
   const [panelActive, setPanelActive] = useState(false);
 
@@ -15,8 +18,10 @@ function Login() {
 
   const checkUserInputs = () => {
     userList.find((user) => {
+      
       if (user.name === userName && user.password === password) {
-        navigate("/inLogin/songList");
+        navigate("/inLogin/searchSongs");
+    
       } else {
         console.log("user name or password not true");
       }
