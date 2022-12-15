@@ -7,7 +7,8 @@ function Search() {
   const {setOnSearch} = useContext(MainContext);
 
   const changeSearchState = (e) => {
-    if (e.key === "Enter") {
+    console.log(e.keyCode);
+    if (e.keyCode === 13 || e.keyCode === 114) {
       setOnSearch(e.target.value);
     }
   };
@@ -19,11 +20,12 @@ function Search() {
         name="search"
         placeholder="Search..."
         className="input"
+       
         onKeyDown={(e) => changeSearchState(e)}
       />
 
-      <a href="h" className="btn">
-        <i className="fas fa-search"></i>
+      <a href="h" className="btn"  onClick={(e) => changeSearchState(e)}>
+        <i className="fas fa-search" ></i>
       </a>
     </div>
   );

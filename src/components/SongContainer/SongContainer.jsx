@@ -4,12 +4,13 @@ import "./SongContainer.css";
 
 function SongContainer({ song, setPopup }) {
   return (
-    <div
-      className="songContainer"
-      onClick={() => {
-        setPopup(song.id);
-      }}
-    >
+    <div className="songContainer">
+      <button
+        id="playPauseButton"
+        onClick={() => {
+          setPopup(song.id);
+        }}
+      ></button>
       <img
         src={song.thumbnail.url}
         alt={song.thumbnail.title}

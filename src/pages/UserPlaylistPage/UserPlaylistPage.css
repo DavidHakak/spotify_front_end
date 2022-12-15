@@ -1,9 +1,11 @@
-.UserPlaylistPag {
-
-
+.UserPlaylistPage {
+    background-image: linear-gradient(180deg, rgb(104, 119, 235), rgb(160, 231, 231));
     width: 100vw;
-    height: 96vh;
+    min-height: 100vh;
+    padding: 8% 1% 1% 1%;
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
 }

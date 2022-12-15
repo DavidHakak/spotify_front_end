@@ -10,8 +10,9 @@ function MainContainerSongs() {
 
   return (
     <div className="mainContainerSongs">
-      {songList ? (
-        
+      {songList ? 
+      (
+  
         songList.map((song) => (
           <SongContainer key={song.title} song={song} setPopup={setPopup} />
           ))

@@ -1,5 +1,6 @@
 .searchContainer {
-    background: rgba(0, 228, 249, 0.082);
+    background: #c9184a;
+    color: #000000;
     height: 57px;
     border-radius: 30px;
     padding: 10px 20px;

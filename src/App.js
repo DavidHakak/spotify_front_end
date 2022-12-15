@@ -10,9 +10,10 @@ import UserContext from './context/UserContext';
 
 function App() {
   const [popup, setPopup] = useState(false);
-  const [onSearch, setOnSearch] = useState("ישי ריבו");
+  const [onSearch, setOnSearch] = useState("נתן גושן");
   const [songList, setSongList] = useState("");
-
+  const [userDetails, setUserDetails] = useState({});
+  const [userFullName, setUserFullName] = useState("");
 
 
   return (
@@ -22,15 +23,17 @@ function App() {
       onSearch,
       setOnSearch,
       songList,
-      setSongList
+      setSongList,
+      userFullName,
+      setUserFullName
     }} >
-      <UserContext.Provider value={{}}>
+      <UserContext.Provider value={{ userDetails, setUserDetails, }}>
 
         <div className="App" >
           <Routes>
             <Route path='/' element={<Login />} />
-            <Route path='/inLogin/searchSongs' element={<SearchSongs />} />
-            <Route path='/inLogin/playPlaylist' element={<UserPlaylistPage />} />
+            <Route path='/searchSongs' element={<SearchSongs />} />
+            <Route path='/playPlaylist' element={<UserPlaylistPage />} />
             <Route path='*' element={<NotFuond />} />
           </Routes>
         </div >
