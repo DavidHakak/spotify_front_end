@@ -8,7 +8,7 @@ function Logo() {
     <div
       className="logo"
       onClick={() => {
-        navigate("/searchSongs");
+        navigate("/App/SearchSongs");
       }}
     >
       <img src="/image/logo.png" alt="logo" />

@@ -1,8 +1,11 @@
 import React from "react";
+import { useState } from "react";
 import SongDetails from "../SongDetails/SongDetails";
 import "./SongContainer.css";
 
 function SongContainer({ song, setPopup }) {
+  const [isOption, setIsOption] = useState(true);
+
   return (
     <div className="songContainer">
       <button
@@ -11,6 +14,19 @@ function SongContainer({ song, setPopup }) {
           setPopup(song.id);
         }}
       ></button>
+      <span
+        class="material-symbols-outlined"
+        onClick={() => {
+          setIsOption(!isOption);
+        }}
+      >
+        more_vert
+        <div id="myDropdown" className= {isOption ? "dropdown-content":"show"}>
+          <div>הוסף לפלייליסט</div>
+          <div>הסר מפלייליסט</div>
+        </div>
+      </span>
+     
       <img
         src={song.thumbnail.url}
         alt={song.thumbnail.title}

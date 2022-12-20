@@ -4,20 +4,16 @@ import SongContainer from "../SongContainer/SongContainer";
 import "./MainContainerCearchSongs.css";
 
 function MainContainerSongs() {
-  const {songList, setPopup}=useContext(MainContext);
-
-
-
+  const { songList, setPopup, setIsSearch } = useContext(MainContext);
+  setIsSearch(true)
   return (
     <div className="mainContainerSongs">
-      {songList ? 
-      (
-  
+      {songList ? (
         songList.map((song) => (
           <SongContainer key={song.title} song={song} setPopup={setPopup} />
-          ))
-          ) : (
-            <>
+        ))
+      ) : (
+        <>
           <span class="loader"></span>
           <span class="loader"></span>
           <span class="loader"></span>

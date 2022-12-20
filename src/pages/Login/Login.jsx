@@ -2,14 +2,12 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import MainContext from "../../context/MainContext";
+
 import UserContext from "../../context/UserContext";
 import "./Login.css";
 
 function Login() {
   const { setUserDetails } = useContext(UserContext);
-
-  const { setUserFullName } = useContext(MainContext);
 
   const [panelActive, setPanelActive] = useState(false);
 
@@ -32,10 +30,22 @@ function Login() {
         })
         .then((response) => {
           if (response.data.token) {
+            console.log(response.data);
             setUserDetails(response.data);
-            setUserFullName(response.data.userExists.userName);
-            localStorage.setItem('userToken', JSON.stringify(response.data.token));
-            navigate("/searchSongs");
+            
+            localStorage.setItem(
+              "userToken",
+              JSON.stringify(response.data.token)
+            );
+            localStorage.setItem(
+              "_id",
+              JSON.stringify(response.data.userExists._id)
+            );
+            localStorage.setItem(
+              "userName",
+              JSON.stringify(response.data.userExists.userName)
+            );
+            navigate("/App/SearchSongs");
           }
         });
     }
@@ -53,8 +63,10 @@ function Login() {
           console.log(response.data);
           if (response.data.token) {
             setUserDetails(response.data);
-            setUserFullName(response.data.newUser.userName);
-            localStorage.setItem('userToken', JSON.stringify(response.data.token));
+            localStorage.setItem(
+              "userToken",
+              JSON.stringify(response.data.token)
+            );
             navigate("/searchSongs");
           }
         });

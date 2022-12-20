@@ -1,12 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Login from "./pages/Login/Login"
-import SearchSongs from './pages/SearchSongs/SearchSongs';
-import UserPlaylistPage from "./pages/UserPlaylistPage/UserPlaylistPage"
+import MyApp from './pages/MyApp/MyApp';
 import MainContext from './context/MainContext';
 import NotFuond from "./pages/NotFuond/NotFuond"
-import './App.css';
 import UserContext from './context/UserContext';
+import './App.css';
 
 function App() {
   const [popup, setPopup] = useState(false);
@@ -14,7 +13,8 @@ function App() {
   const [songList, setSongList] = useState("");
   const [userDetails, setUserDetails] = useState({});
   const [userFullName, setUserFullName] = useState("");
-
+  const [playlistList, setPlaylistList] = useState([]);
+  const [isSearch, setIsSearch] = useState(true);
 
   return (
     <MainContext.Provider value={{
@@ -25,15 +25,18 @@ function App() {
       songList,
       setSongList,
       userFullName,
-      setUserFullName
+      setUserFullName,
+      playlistList,
+      setPlaylistList,
+      isSearch,
+      setIsSearch,
     }} >
       <UserContext.Provider value={{ userDetails, setUserDetails, }}>
 
         <div className="App" >
           <Routes>
             <Route path='/' element={<Login />} />
-            <Route path='/searchSongs' element={<SearchSongs />} />
-            <Route path='/playPlaylist' element={<UserPlaylistPage />} />
+            <Route path='/app/*' element={<MyApp />} />
             <Route path='*' element={<NotFuond />} />
           </Routes>
         </div >

@@ -3,8 +3,7 @@ import MainContext from "../../context/MainContext";
 import "./Search.css";
 
 function Search() {
-
-  const {setOnSearch} = useContext(MainContext);
+  const { setOnSearch } = useContext(MainContext);
 
   const changeSearchState = (e) => {
     console.log(e.keyCode);
@@ -16,17 +15,13 @@ function Search() {
   return (
     <div className="searchContainer">
       <input
-        type="search"
-        name="search"
-        placeholder="Search..."
-        className="input"
-       
         onKeyDown={(e) => changeSearchState(e)}
+        name="search"
+        type="search"
+        placeholder="Search..."
+        className="input-search"
       />
-
-      <a href="h" className="btn"  onClick={(e) => changeSearchState(e)}>
-        <i className="fas fa-search" ></i>
-      </a>
+      <i className="fas fa-search" onClick={(e) => changeSearchState(e)}></i>
     </div>
   );
 }

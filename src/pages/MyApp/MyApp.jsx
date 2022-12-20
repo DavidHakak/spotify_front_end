@@ -1,14 +1,18 @@
 import axios from "axios";
 import React, { useContext, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
 import Header from "../../components/Header/Header";
-import Main from "../../components/Main/Main";
-import "./SearchSongs.css";
 import SideBar from "../../components/SideBar/SideBar";
 import MainContext from "../../context/MainContext";
 import Popup from "../../components/Popup/Popup";
+import NotFuond from "../NotFuond/NotFuond";
+import UserPlaylistPage from "../UserPlaylistPage/UserPlaylistPage";
+import MainContainerCearchSongs from "../../components/MainContainerCearchSongs/MainContainerCearchSongs";
+import "./MyApp.css";
+
 function Layout() {
-  
-  const { onSearch, setSongList, popup } = useContext(MainContext);
+  const { onSearch, setSongList, popup, isSearch } = useContext(MainContext);
+ 
 
   useEffect(() => {
     const options = {
@@ -34,7 +38,11 @@ function Layout() {
   return (
     <div className="layout">
       <Header />
-      <Main />
+      <Routes>
+        <Route path="SearchSongs" element={<MainContainerCearchSongs />} />
+        <Route path="UserPlaylist" element={<UserPlaylistPage />} />
+        <Route path="*" element={<NotFuond />} />
+      </Routes>
       <SideBar />
       {popup && <Popup />}
     </div>
