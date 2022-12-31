@@ -8,10 +8,11 @@ import Popup from "../../components/Popup/Popup";
 import NotFuond from "../NotFuond/NotFuond";
 import UserPlaylistPage from "../UserPlaylistPage/UserPlaylistPage";
 import MainContainerCearchSongs from "../../components/MainContainerCearchSongs/MainContainerCearchSongs";
+import Tests from "../Tests/Tests";
 import "./MyApp.css";
 
 function Layout() {
-  const { onSearch, setSongList, popup, isSearch } = useContext(MainContext);
+  const { onSearch, setSongList, popup } = useContext(MainContext);
  
 
   useEffect(() => {
@@ -41,6 +42,7 @@ function Layout() {
       <Routes>
         <Route path="SearchSongs" element={<MainContainerCearchSongs />} />
         <Route path="UserPlaylist" element={<UserPlaylistPage />} />
+        <Route path="tests" element={<Tests />} />
         <Route path="*" element={<NotFuond />} />
       </Routes>
       <SideBar />

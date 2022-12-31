@@ -1,25 +1,26 @@
 .UserPlaylistPage {
     background: linear-gradient(to right, #7B0D1E, #9F2042);
-    width: 100vw;
+    min-width: 83vw;
+    max-width: 83vw;
     min-height: 100vh;
-    padding: 5vw 0vw 0vw 0vw;
-}
-
-
-.container-playlist-list{
-    margin-right:17vw ;
-    min-height: 90vh;
-    width: 83vw;
+    padding: 3.7vw 0vw 0vw 0vw;
     display: flex;
     flex-wrap: wrap;
-   direction: rtl;
 }
 
 
-.playlist-card{
+.container-playlist-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    direction: rtl;
+}
+
+
+.playlist-card {
     width: 220px;
     height: 180px;
-    margin: 70px 45px 50px 45px;
+    margin: 100px 62px 50px 62px;
     padding: 18px;
     background: #ffbea4;
     border-radius: 15px;

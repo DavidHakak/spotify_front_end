@@ -9,3 +9,12 @@
 .App {
   display: flex;
 }
+
+li{
+  list-style: none;
+}
+
+a{
+  color: var(--text-color);
+  text-decoration: none;
+}

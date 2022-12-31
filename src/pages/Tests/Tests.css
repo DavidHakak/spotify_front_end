@@ -1,0 +1,11 @@
+.tests-body{
+    width: 290px;
+    height: 230px;
+    margin-top: 29vw;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.506);
+    transition: 0.8s;
+    background: teal;
+    display: flex;
+    flex-wrap: wrap;
+}
